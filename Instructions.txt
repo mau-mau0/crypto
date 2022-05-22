@@ -1,0 +1,11 @@
+docker build -t crypto .
+
+docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h crypto.local --name crypto -p 8080:8080 -v $PWD:/crypto crypto /bin/bash
+
+winpty docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h crypto.local --name crypto -p 8080:8080 -v hostDirectory:/crypto crypto /bin/bash
+
+(Once container is built, docker start crypto; docker attach crypto)
+
+conda activate crypto
+
+jupyter-notebook --ip=0.0.0.0 --port=8080 --allow-root

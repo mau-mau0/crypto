@@ -1,0 +1,15 @@
+name: crypto
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyter=1.0.0
+  - matplotlib=3.5.2
+  - numpy=1.22.3
+  - pandas=1.4.2
+  - python-dateutil=2.8.2
+  - pytz=2020.4
+  - seaborn=0.11.0
+  - fastapi=0.78.0
+  - uvicorn=0.17.6
