@@ -21,8 +21,23 @@ class MarketData:
     def getAllTickers(self):
         url = self.apiurl + "/api/v1/market/allTickers"
         r = self.session.get(url)
-        data = r.json()["data"]
-        return data
+        data = r.json()["data"]["ticker"]
+        df = pd.DataFrame.from_dict(data, orient="columns")
+        return df.loc[
+            :,
+            [
+                "symbolName",
+                "buy",
+                "sell",
+                "changeRate",
+                "changePrice",
+                "high",
+                "low",
+                "vol",
+                "last",
+                "averagePrice",
+            ],
+        ]
 
     # returns a single trading pair ex. 'BTC-USDT'
     def getTicker(self, symbol):
@@ -30,7 +45,8 @@ class MarketData:
         parameters = {"symbol": symbol}
         r = self.session.get(url, params=parameters)
         data = r.json()["data"]
-        df = pd.DataFrame.from_dict(data, orient="index")  # dictionary to dataframe
+        # dictionary to dataframe
+        df = pd.DataFrame.from_dict(data, orient="index", columns=[symbol])
         return df
 
     # returns the order book for a trading pair
@@ -39,8 +55,11 @@ class MarketData:
         url = self.apiurl + "/api/v1/market/orderbook/level2_" + amount
         parameters = {"symbol": symbol, "amount": amount}
         r = self.session.get(url, params=parameters)
-        data = r.json()["data"]
-        return data
+        bids = r.json()["data"]["bids"]
+        asks = r.json()["data"]["asks"]
+        dfBids = pd.DataFrame.from_dict(bids)
+        dfAsk = pd.DataFrame.from_dict(asks)
+        return dfBids, dfAsk
 
     # returns the full order book for a trading pair
     def getFullOrderBook(self, symbol):  # needs headers and API key
