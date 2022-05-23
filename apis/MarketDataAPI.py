@@ -57,9 +57,11 @@ class MarketData:
         r = self.session.get(url, params=parameters)
         bids = r.json()["data"]["bids"]
         asks = r.json()["data"]["asks"]
-        dfBids = pd.DataFrame.from_dict(bids)
-        dfAsk = pd.DataFrame.from_dict(asks)
-        return dfBids, dfAsk
+        dfBids = pd.DataFrame.from_dict(bids, orient="columns")
+        dfAsks = pd.DataFrame.from_dict(asks, orient="columns")
+        dfAsks.columns = ["", "Asks"]
+        dfBids.columns = ["", "Bids"]
+        return dfBids, dfAsks
 
     # returns the full order book for a trading pair
     def getFullOrderBook(self, symbol):  # needs headers and API key
@@ -82,3 +84,4 @@ marketData = MarketData()
 
 print(marketData.getTicker("ETH-USDT"))
 print(marketData.getFiatPrice("ETH"))
+print(marketData.getPartOrderBook("ETH-USDT", "20"))
