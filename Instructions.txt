@@ -9,3 +9,8 @@ winpty docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h crypto.l
 conda activate crypto
 
 jupyter-notebook --ip=0.0.0.0 --port=8080 --allow-root
+
+
+Uvicorn instructions
+
+uvicorn service.main:app --host 0.0.0.0 --port 8887 --reload
