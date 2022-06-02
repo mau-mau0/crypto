@@ -74,3 +74,5 @@ class MarketData:
 
 
 marketData = MarketData()
+
+print(marketData.getFiatPrice("BTC"))

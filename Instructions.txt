@@ -2,7 +2,7 @@ docker build -t crypto .
 
 docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h crypto.local --name crypto -p 8080:8080 -v $PWD:/crypto crypto /bin/bash
 
-winpty docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h crypto.local --name crypto -p 8080:8080 -v hostDirectory:/crypto crypto /bin/bash
+winpty docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h crypto.local --name crypto -p 8080:8080 -p 8887:8887 -v F:\Documents\Programming\pricelistener\crypto:/crypto crypto /bin/bash
 
 (Once container is built, docker start crypto; docker attach crypto)
 
@@ -14,3 +14,18 @@ jupyter-notebook --ip=0.0.0.0 --port=8080 --allow-root
 Uvicorn instructions
 
 uvicorn service.main:app --host 0.0.0.0 --port 8887 --reload
+
+
+Websockets
+Steps
+
+1. Get the endpoint field from the JSON data returned by the following 2 POST requests
+ 
+POST /api/v1/bullet-public
+POST /api/v1/bullet-private
+
+2. Append the token to the endpoint as a query string parameter named "token", e.g. wss://ws-api.kucoin.com/endpoint?token=
+
+3. Open a new webSocket connection to the URL you get from the response (wss://ws-api.kucoin.com/endpoint?token=2neA....) 
+
+4. Keep pinging the connection with an interval of 1000 to 5000 ml seconds.
