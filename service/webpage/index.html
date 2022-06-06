@@ -5,8 +5,8 @@
     <title>Kucoin Websocket</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="styles.sass" />
-    <script src="main.js"></script>
+    <!-- <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <script src="main.js"></script> -->
 </head>
 
 <body>
@@ -19,41 +19,56 @@
         <li>Enter Channel Subscription Above</li>
     </ul>
     <script>
-        var ws = new WebSocket("wss://ws-api.kucoin.com/endpoint?token=2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJwjDpKR3zLnc_qURhouO340p6s6oMZBeddiYB9J6i9GjsxUuhPw3BlrzazF6ghq4L0SqSvVGXBYse3OKoHhJp0I=.epP4twHtbbyzniXlloGupg==");
+        var ws = new WebSocket("wss://ws-api.kucoin.com/endpoint?token=2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJzjQnSVksPaGjL9H66Zyysr7ez6BR34NqNiYB9J6i9GjsxUuhPw3BlrzazF6ghq4L6qYqayfBYzDnbLZRp5oUPM=.tuftgEJaYobjjEeDcMyGhw==");
 
         // Connection opened
         ws.addEventListener('open', function (event) {
             console.log('Hello Server!');
             setInterval(function () {
-                sendMsg(event = event,
+                sendPing(event = event,
                     input = {
                         "id": "1545910590801",
                         "type": "ping"
                     }
                 )
             }, 4999)
+            ws.onmessage = function (event) {
+                var messages = document.getElementById('messages')
+                var message = document.createElement('li')
+                var content = document.createTextNode(event.data)
+                message.appendChild(content)
+                messages.appendChild(message)
+            };
         });
 
-        ws.onmessage = function (event) {
-            var messages = document.getElementById('messages')
-            var message = document.createElement('li')
-            var content = document.createTextNode(event.data)
-            message.appendChild(content)
-            messages.appendChild(message)
-        };
         function sendMessage(event) {
             var input = document.getElementById("messageText")
             ws.send(input.value)
             input.value = ''
             event.preventDefault()
+            ws.onmessage = function (event) {
+                var messages = document.getElementById('messages')
+                var message = document.createElement('li')
+                var content = document.createTextNode(event.data)
+                message.appendChild(content)
+                messages.appendChild(message)
+                console.log(content)
+            };
         }
 
-        function sendMsg(event, input) {
+        function sendPing(event, input) {
             var input = input
             ws.send(JSON.stringify(input))
             input.value = ''
             event.preventDefault()
-            console.log(JSON.stringify(input))
+            ws.onmessage = function (event) {
+                var messages = document.getElementById('messages')
+                var message = document.createElement('li')
+                var content = document.createTextNode(event.data)
+                message.appendChild(content)
+                messages.appendChild(message)
+                console.log(content)
+            };
         }
     </script>
 </body>
