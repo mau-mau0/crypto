@@ -1,4 +1,4 @@
-var ws = new WebSocket("wss://ws-api.kucoin.com/endpoint?token=2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJwjDpKR3zLnc_qURhouO340p6s6oMZBeddiYB9J6i9GjsxUuhPw3BlrzazF6ghq4L0SqSvVGXBYse3OKoHhJp0I=.epP4twHtbbyzniXlloGupg==");
+var ws = new WebSocket("wss://ws-api.kucoin.com/endpoint?token=2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJzjQnSVksPaGjL9H66Zyysr7ez6BR34NqNiYB9J6i9GjsxUuhPw3BlrzazF6ghq4L6qYqayfBYzDnbLZRp5oUPM=.tuftgEJaYobjjEeDcMyGhw==");
 
 // Connection opened
 ws.addEventListener('open', function (event) {
