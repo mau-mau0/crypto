@@ -1,8 +1,8 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import HTMLResponse
 
-# html_file = open("/crypto/service/webpage/index.html", "r")
-html_file = open("F:\Documents\Programming\pricelistener\crypto\service\webpage", "r")
+html_file = open("/crypto/service/webpage/index.html", "r")
+# html_file = open("F:\Documents\Programming\pricelistener\crypto\service\webpage", "r")
 app = FastAPI()
 
 html = html_file.read()
