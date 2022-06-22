@@ -15,4 +15,4 @@
 
 
 
-Zoom Meeting - http://bit.ly/37wnHd8
+Zoom Meeting - http://bit.ly/crypto_summer_2022
