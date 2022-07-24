@@ -1,117 +1,17 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <title>Kucoin Websocket</title>
+  <head>
+    <title>Crypto Arbitrage</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
-    <script src="main.js"></script> -->
-    <style>
-        header {
-            text-align: center;
-        }
-
-        .flex-container {
-            display: flex;
-        }
-
-        .flex-child {
-            flex: 1;
-            border: 2px solid black;
-        }
-
-        .flex-child:first-child {
-            margin-right: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1>Kucoin Websocket</h1>
-    </header>
-    <div class="flex-container">
-        <div class="flex-child">
-            <form action="">
-                <input type="text" id="messageText1" autocomplete="off" />
-            </form>
-            <ul id='messages1'>
-                <li>Enter Spot Subscription Above</li>
-            </ul>
-        </div>
-        <div class="flex-child">
-            <form action="" onsubmit="sendMessage2(event), sendMessage1(event)">
-                <input type="text" id="messageText2" autocomplete="off" />
-                <button>Send</button>
-            </form>
-            <ul id='messages2'>
-                <li>Enter Future Subscription Above</li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        var ws = new WebSocket("wss://ws-api.kucoin.com/endpoint?token=2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJ5X7QRp187iaWIfCnyhbCj4ETIPaEM_ZJdiYB9J6i9GjsxUuhPw3BlrzazF6ghq4L1Rk8zN1j6L1DEJZUMWDUKI=.oiv_q-_EjcK0stqPbPf5mw==");
-
-        // Connection opened
-        ws.addEventListener('open', function (event) {
-            console.log('Hello Server!');
-            setInterval(function () {
-                sendPing(event = event,
-                    input = {
-                        "id": "1545910590801",
-                        "type": "ping"
-                    }
-                )
-            }, 4999)
-        });
-
-        function sendMessage1(event) {
-            var input = document.getElementById("messageText1")
-            const message = { id: 'messages1', data: input.value }
-            ws.send(input.value)
-            input.value = ''
-            event.preventDefault()
-        }
-
-        function sendMessage2(event) {
-            var input = document.getElementById("messageText2")
-            const section = { id: 'messages2', data: input.value }
-            ws.send(input.value)
-            input.value = ''
-            event.preventDefault()
-        }
-
-        ws.addEventListener('message', function (event) {
-            parse(event)
-        });
-
-        function sendPing(event, input) {
-            var input = input
-            ws.send(JSON.stringify(input))
-            input.value = ''
-            event.preventDefault()
-        }
-
-        function parse(event) {
-            const parsed = JSON.parse(event.data)
-            if (parsed.topic == '/contractMarket/tickerV2:XBTUSDM') {
-                const message = document.createElement('li')
-                const content = document.createTextNode(JSON.stringify(parsed['data']['bestAskPrice']))
-                message.appendChild(content)
-                const messages = document.getElementById('messages2')
-                messages.appendChild(message)
-            }
-            if (parsed.topic == '/market/ticker:BTC-USDT') {
-                const message = document.createElement('li')
-                const content = document.createTextNode(JSON.stringify(parsed['data']['bestAsk']))
-                message.appendChild(content)
-                const messages = document.getElementById('messages1')
-                messages.appendChild(message)
-            }
-        }
-    </script>
-</body>
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env> - pandas </py-env>
+  </head>
+  <body>
+    <py-script> import pandas as pd print('Hello World') </py-script>
+  </body>
 </html>
