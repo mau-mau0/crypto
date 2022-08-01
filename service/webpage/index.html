@@ -1,17 +1,170 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Crypto Arbitrage</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <py-env> - pandas </py-env>
-  </head>
-  <body>
-    <py-script> import pandas as pd print('Hello World') </py-script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Arbitrage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <py-env>
+        - numpy
+        - matplotlib
+  </py-env>
+</head>
+
+<body>
+
+  <section class="topbar">
+
+    <nav>
+      <div class="css-01">
+
+        <div class="css-02">
+          
+         <div class="logo">
+            <h2>Crypto<span> Arbitrage</span></h2>
+         </div> 
+          
+         <div class="links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Future</a></li>
+              <li><a href="#">Triangle</a></li>
+              <li><a href="#">DEX</a></li>
+            </ul>
+         </div>
+
+         <div class="top-btn">
+            <button type="button">Click</button>
+         </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  
+  <section dir="column" class="home">
+
+    <div class="home-container">
+      <div class="landing">
+        <div class="css-03">
+          <div style="opacity: 1;">
+            <div class="watch-video">
+              <div style="transform: none;">
+                <button type="button" class="video-btn">Link To Spreadsheet</button>
+              </div>
+            </div>
+            <div class="css-04">
+              <div style="transform: none;">
+                <h2 class="css-05">
+                  <p class="css-06">Summer 2022</p> 
+                  <br>Crypto<br>Arbitrage
+                </h2>
+              </div>
+              <div class="css-07">
+                <p class="css-08">
+                  Take a look at a few of the arbitrage applications I built Summer of 2022
+                </p>
+              </div>
+            </div>
+            <div class="css-09">
+              <div style="transform: none;">
+                <button type="button" class="css-10">
+                  View Source Code
+                </button>
+              </div>
+              <div style="transform: none;">
+                <a class="css-13" href="">
+                  <button type="button" class="css-14">
+                    Jupyter
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="css-15">
+              <button type="button" class="css-16" value="0xA808B22ffd2c472aD1278088F16D4010E6a54D5F">
+                <p class="css-0">DEX</p>
+                <p class="css-17">&nbsp;Smart Contract</p>
+                &nbsp;<!-- -->0xA808...4D5F<!-- -->&nbsp;
+                <svg viewBox="0 0 24 24" focusable="false" class="css-18">
+                  <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div style="opacity: 1; transform: none;">
+            <div class="css-19">
+              <div class="css-20">
+                <div class="css-">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#F2555A" style="color:#F2555A" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path>
+                  </svg>
+                </div>
+                <p class="css-23">SPOT Price - ETH</p>
+                <p class="css-24">$x.xx</p>
+              </div>
+              <div class="css-20">
+                <div class="css-">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#F2555A" style="color:#F2555A" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                  </svg>
+                </div>
+                <p class="css-23">FUTURE Price - ETH</p>
+                <p class="css-24">$x.xx</p>
+              </div>
+              <div class="css-20">
+                <div class="css-fu6yzn">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#FFCB47" style="color: rgb(255, 203, 71);" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path>
+                  </svg>
+                </div>
+                <p class="css-23">Arb PNL</p>
+                <p class="css-24">undefined</p>
+              </div>
+              <div class="css-20">
+                <div class="css-fu6yzn">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#FFCB47" style="color: rgb(255, 203, 71);" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                  </svg>
+                </div>
+                <p class="css-23">Status</p>
+                <p class="css-24">Offline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="transform: none;">
+      <div class="css-26">
+        <div class="css-27">
+          <h2 class="css-28">
+            <p class="css-06">Arbitrage</p>
+            &nbsp;is awesome
+          </h2>
+          <div class="css-29">
+            <p class="css-30">
+              Arbitrage is full of opportunities of low hanging fruit you just have to find them.
+            </p>
+            <p class="css-30">
+              I built this application to make it easier for me to start finding these opportunities.</b>.
+            </p>
+            <p class="css-30">
+              Instead analyzing charts and parsing through information myself, I built a application to do it for me.
+            </p>
+            <p class="css-30">
+              With my goal being to spot these opportunities and exectute them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+
+</body>
 </html>
+
