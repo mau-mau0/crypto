@@ -11,6 +11,9 @@
   <py-env>
         - numpy
         - matplotlib
+		- requests
+		- websockets
+		- json
   </py-env>
 </head>
 
@@ -46,12 +49,12 @@
 					<div style="opacity: 1;">
 						<div class="watch-video">
 							<div style="transform: none;">
-								<button type="button" class="video-btn">Link To Spreadsheet</button>
+								<button type="button" class="hover video-btn">Link To Spreadsheet</button>
 							</div>
 						</div>
 						<div class="css-04">
 							<div style="transform: none;">
-								<h2 class="css-05">
+								<h2 class="css-05 hover-down">
 									<p class="css-06">Summer 2022</p> 
 									<br>Crypto<br>Arbitrage
 								</h2>
@@ -64,13 +67,13 @@
 						</div>
 						<div class="css-09">
 							<div style="transform: none;">
-								<button type="button" class="css-10">
+								<button type="button" class="hover css-10">
 									View Source Code
 								</button>
 							</div>
 							<div style="transform: none;">
 								<a class="css-13" href="">
-									<button type="button" class="css-14">
+									<button type="button" class="hover css-14">
 										Jupyter
 									</button>
 								</a>
@@ -138,7 +141,7 @@
 			<div class="css-32">
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:40%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Docker" src="assets/images/docker.png">
 							</span>
@@ -147,7 +150,7 @@
 				</div>
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:22%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="APIs" src="assets/images/logo_api.png">
 							</span>
@@ -156,7 +159,7 @@
 				</div>	
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:50%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Websockets" src="assets/images/websocket.png">
 							</span>
@@ -165,7 +168,7 @@
 				</div>
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;" alt="Python" src="assets/images/python.png">
 							</span>
@@ -174,7 +177,7 @@
 				</div>
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:40%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="MatPlotLib" src="assets/images/logo_matplotlib.png">
 							</span>
@@ -183,7 +186,7 @@
 				</div>
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:45%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Pandas" src="assets/images/pandas.png">
 							</span>
@@ -192,7 +195,7 @@
 				</div>
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:35%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Numpy" src="assets/images/numpy-python.png">
 							</span>
@@ -201,7 +204,7 @@
 				</div>
 				<div style="transform: none;">
 					<a class="css-33">
-						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
 							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:45%">
 								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="FastAPI" src="assets/images/fastapi.png">
 							</span>
@@ -225,7 +228,7 @@
               Arbitrage is full of opportunities of low hanging fruit you just have to find them.
             </p>
             <p class="css-30">
-              I built this application to make it easier for me to start finding these opportunities.</b>.
+              I built this application to make it easier for me to start finding these opportunities.</b>
             </p>
             <p class="css-30">
               Instead analyzing charts and parsing through information myself, I built a application to do it for me.
@@ -356,6 +359,35 @@
 		</div>
 	</div>
   </section>
+  <section>
+	<div style="background-color: black;">
+		<py-script>
+			import json
+			import requests
+			import websockets
+			url = 'https://api.kucoin.com/api/v1/bullet-public'
+			x = requests.post(url)
+			cjson = json.loads(x.text)
+			endpoint = cjson['data']['instanceServers'][0]['endpoint']
+			token = cjson['data']['token']
+			sub = {
+				"id": 1545910660739,
+				"type": "subscribe",
+				"topic": "/market/ticker:XMR-BTC",
+				"response": True
+			}
+			async with websockets.connect(endpoint+"?token="+token) as conn: # creates ws connection
+				await conn.send(json.dumps(sub)) # sends ws message
+				res = await conn.recv() # recieves ws message
+				counter = 0
+				while True and counter < 2:
+					res = await conn.recv()
+					print(res)
+					counter += 1
+				await conn.close()
+		</py-script>
+	</div>
+</section>
 
 
 </body>
