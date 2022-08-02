@@ -648,6 +648,7 @@ nav button:hover {
     grid-area: text / text / text / text;
     justify-self: start;
     color: rgb(160, 160, 160);
+    font-weight: bold;
 }
 
 @media screen and (min-width: 720px) {
