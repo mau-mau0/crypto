@@ -25,7 +25,7 @@ nav {
     -ms-flex-direction: column;
     flex-direction: column;
     position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 1200;
 }
@@ -776,4 +776,226 @@ nav button:hover {
     font-size: 1rem;
     line-height: 1.5rem;
     color: rgb(160, 160, 160);
+}
+
+.roadmap {
+    background-color: #161616;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.roadmap .roadmap-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 76px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 66px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.roadmap .roadmap-section {
+    background: #232323;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 8%);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    border-radius: 24px;
+    max-width: 968px;
+    min-height: 182px;
+    margin-bottom: 22px;
+}
+
+.mx-auto {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+.roadmap .col, .roadmap .row {
+    height: 100%;
+}
+
+.row {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(0*-1);
+    margin-right: calc(1.5rem*-0.5);
+    margin-left: calc(1.5rem*-0.5);
+}
+
+.roadmap .col, .roadmap .row {
+    height: 100%;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+@media (min-width: 768px) {
+.col-md-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.col {
+    flex: 1 0;
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1.5rem*0.5);
+    padding-left: calc(1.5rem*0.5);
+    margin-top: 0;
+}
+
+.roadmap .roadmap-image-div {
+    position: relative;
+    height: 182px;
+    width: 100%;
+}
+
+.roadmap .roadmap-image {
+    width: 112px;
+    height: 112px;
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.roadmap .col, .roadmap .row {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+.col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+}
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.col {
+    flex: 1 0;
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1.5rem*0.5);
+    padding-left: calc(1.5rem*0.5);
+    margin-top: 0;
+}
+
+.roadmap .roadmap-section .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    margin-top: 22px;
+}
+
+.css-vubbuv {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.5rem;
+}
+
+.roadmap .roadmap-section .list {
+    margin-top: 12px;
+}
+
+.roadmap .roadmap-section .point {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FCFCFC;
+    list-style: disc;
+}
+
+.roadmap .roadmap-section .list-right {
+    margin-top: 72px;
+}
+
+.css-31 {
+    font-family: Clash Display;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+.css-32 {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+.css-32 {
+    display: grid;
+    grid-gap: 2rem;
+    justify-items: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 80%;
+}
+
+.css-33 {
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    cursor: pointer;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    color: inherit;
+}
+
+.hover:hover {
+    transform: scale(1.3);
 }
