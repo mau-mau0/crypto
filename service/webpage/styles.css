@@ -60,7 +60,7 @@ nav {
 }
 
 .logo span {
-    color: red;
+    color: #6ee9b1;
 }
 
 nav ul li {
@@ -82,10 +82,10 @@ nav ul li a:hover {
 
 nav button {
     border: none;
-    background: red;
+    background: linear-gradient(180deg, #6ee9b1 0%, #256548 100%);
     padding: 12px 30px;
     border-radius: 30px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 15px;
     transition: .4s;
@@ -220,8 +220,8 @@ nav button:hover {
     font-size: 1rem;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
-    background: rgb(60, 24, 26);
-    border: 1px solid rgb(84, 27, 31);
+    background: #234d3a;
+    border: 1px solid #6ee9b1;
     padding: 16px;
     color: #FCFCFC;
     font-family: Inter;
@@ -288,7 +288,7 @@ nav button:hover {
 
 .css-06 {
     display: inline;
-    background-image: radial-gradient(128.15% 697.56% at 9.91% 100%, #FF3F46 0%, #FF749E 57.68%, #FFE3AB 100%);
+    background-image: radial-gradient(128.15% 697.56% at 9.91% 100%, #6ee9b1 0%, #9db569 57.68%, #FFE3AB 100%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -397,9 +397,9 @@ nav button:hover {
     padding-inline-start: 18px;
     -webkit-padding-end: 18px;
     padding-inline-end: 18px;
-    background: linear-gradient(180deg, #F3484F 0%, #C51E25 100%);
+    background: linear-gradient(180deg, #6ee9b1 0%, #256548 100%);
     padding: 16px;
-    color: #FCFCFC;
+    color: black;
     font-family: Inter;
     margin-right: 20px;
     font-family: Clash Display;
