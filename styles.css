@@ -540,6 +540,8 @@ nav button:hover {
     font-family: Inter;
     align-self: center;
     font-family: Clash Display;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
 @media screen and (min-width: 720px) {
