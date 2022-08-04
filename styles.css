@@ -1011,3 +1011,185 @@ img, svg {
 .hover-down:hover {
     transform: scale(0.9);
 }
+
+.css-34 {
+    background-color: #161616;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: all 50ms linear 0s;
+}
+
+.css-35 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    -webkit-box-pack: start;
+    -webkit-box-align: start;
+    gap: 1.25rem;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 0px;
+    position: static;
+}
+
+.css-36 {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+.css-37 {
+    width: 100%;
+    padding: 0px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
+    max-width: 1200px;
+}
+
+.css-38 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+    width: 100%;
+}
+
+.css-39 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    gap: 0px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 0px;
+    position: static;
+}
+
+.text-theme-gray {
+    --tw-text-opacity: 1;
+    color: rgb(140 158 166/1);
+}
+
+.css-40 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+    gap: 1.25rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-box-align: start;
+    overflow: visible;
+}
+
+@media (min-width: 1024px) {
+.padding-around-graph {
+    padding: 1rem;
+}
+}
+
+.padding-around-graph {
+    padding: 1rem;
+}
+
+.to-theme-bg {
+    --tw-gradient-to: #161b1d;
+}
+
+.via-theme-bg {
+    --tw-gradient-to: rgba(22,27,29,0);
+    --tw-gradient-stops: #000,#161b1d,#161b1d;
+}
+
+.from-black {
+    --tw-gradient-from: #000;
+    --tw-gradient-to: transparent;
+    --tw-gradient-stops: #000,#161b1d;
+}
+
+.bg-gradient-to-tl {
+    background-image: linear-gradient(to top left, #000,#161b1d,#161b1d);
+}
+
+.bg-theme-bg {
+    --tw-bg-opacity: 1;
+    background-color: rgb(22 27 29/1);
+}
+
+.rounded-3xl {
+    border-radius: 1.5rem;
+}
+
+.css-41 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: start;
+    -webkit-box-align: start;
+    gap: 0px;
+    width: auto;
+    height: 100%;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 0px;
+    position: static;
+}
+
+.css-42 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    -webkit-box-pack: start;
+    -webkit-box-align: start;
+    gap: 0px;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 0px;
+    position: static;
+}
+
+.css-43 {
+    padding: 24px 0px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-family: Clash Display;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    color: rgb(110, 233, 177) !important;
+}
+
+.css-43 > * {
+    font-family: Clash Display;
+}
+
+
+.css-44 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    gap: 0.5rem;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 0px;
+    position: static;
+}
