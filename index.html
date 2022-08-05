@@ -420,7 +420,7 @@
 								prices remain relatively tight but periodically, the spread widens. 
 							</p>
 							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
-								If you look at figure 2, I created second graph to capture those brief 
+								Now lets look at at figure 2. I created second graph to capture those brief 
 								moments where the spread widens . The difference between assets tend to 
 								consolidate with each other, but due to market conditions the spread gap 
 								widens which triggers an alert as marked in figure 2.
@@ -444,10 +444,11 @@
 								Triangle-Trade Arbitrage
 							</h3>
 							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
-								The triangle trade strategy implements the bellman ford algorithm which is generally used 
-								to find the shortest distance between a graph of nodes. But if you negate the log of each 
-								weight and run the algorithm sometimes you can find a infinte loop equaling a arbitrage 
-								opportunity.
+								Triangle trade arbitrage occurs when there are discrepancies in currency exchange rates. 
+								It can happen when a particular currency is overvalued compared to one currency but undervalued 
+								compared to the other. Or, to put it in other words, the exchange between currencies in the market is 
+								inefficient. A trader can take advantage of this by placing three simultaneous trades, buying one 
+								currency and selling another, using a third currency as the base currency.
 							</p>
 						</div>
 					</div>
@@ -471,9 +472,28 @@
 						<div style="width:100%;margin:80px auto" class="css-38">
 						<div direction="column" width="100%" class="css-39">
 							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 100%;">
-								The triangle trade strategy implements the bellman ford algorithm which is generally used to find the shortest
-								distance between a graph of nodes. But if you negate the log of each weight and run the algorithm sometimes
-								you can find a infinte loop equaling a arbitrage opportunity.
+								I have developed a service that implements the bellman-ford algorithm, which is generally 
+								used to find the shortest path between nodes. The algorithm loops through a given graph 
+								until it finds the shortest path unless a negative weight cycle is detected. A negative 
+								weight cycle would result in an infinite loop equaling an arbitrage opportunity when you 
+								involve currencies. This allows me to find opportunities in the market by identifying potential 
+								paths between currencies and detecting any cycles that could create an arbitrage situation.
+							</p>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 100%;">
+								Taking a look at figure 3, I drew a visual that outlines an example of an opportunity between 
+								three cryptocurrencies. Although there are five currencies in the visual where are going to use 
+								3 for simplicity's sake. I built a script that feeds websocket data through the bellman-ford 
+								algorithm that spits out currency paths that create an arbitrage opportunity. Theoretically, 
+								it would take those trades and execute them making a small profit.	
+							</p>
+							<span class="text-theme-gray" style="text-decoration:underline;;margin: 2rem 0px 0px; text-align: left; width: 100%;">Explanation</span>
+							<p class="text-theme-gray" style="text-align: left; width: 100%;">
+								In figure 3 the exchange rates of<br>
+								Monero to Bitcoin is 0.741,<br>
+								Bitcoin to Ethereum is 1.366,<br>
+								Ethereum to Bitcoin is 0.995<br>
+								Multiplication of these exchange rates = 0.741 * 1.366 * 0.995 = 1.007<br>
+								Which greater than 1 making a 0.71% return.
 							</p>
 						</div>
 					</div>
