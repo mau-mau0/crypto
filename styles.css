@@ -76,7 +76,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: red;
+    color: #6ee9b1;
     transition: .3s;
 }
 
@@ -136,7 +136,7 @@ nav button:hover {
 
 @media screen and (min-width: 720px) {
 .landing {
-    padding-top: 5rem;
+    padding-top: 9rem;
 }
 }
 
@@ -778,6 +778,8 @@ nav button:hover {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 35px 0px;
+    width: 70%;
 }
 
 .css-30 {
