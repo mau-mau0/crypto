@@ -209,10 +209,9 @@ nav button:hover {
     vertical-align: middle;
     outline: transparent solid 2px;
     outline-offset: 2px;
-    width: 200px;
+    width: 255px;
     line-height: 1.2;
     border-radius: 8px;
-    font-weight: 600;
     transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
     transition-duration: 200ms;
     height: 50px;
@@ -224,7 +223,7 @@ nav button:hover {
     border: 1px solid #6ee9b1;
     padding: 16px;
     color: #FCFCFC;
-    font-family: Inter;
+    font-family: Clash Display;
     transition:0.4s;
 }
 
