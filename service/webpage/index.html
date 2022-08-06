@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Arbitrage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <py-env>
+        - numpy
+        - matplotlib
+		- json
+  </py-env>
+</head>
+
+<body>
+	<!-- Top Navigation Bar -->
+	<section class="topbar">
+		<nav>
+			<div class="css-01">
+				<div class="css-02">
+					<div class="logo">
+						<h2>Crypto<span> Arbitrage</span></h2>
+					</div> 
+					<div class="links">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#future">Future</a></li>
+							<li><a href="#triangle">Triangle</a></li>
+							<li><a href="#kelly">Kelly</a></li>
+							<li><a>DEX</a></li>
+							<!-- <li><a href="#dex">DEX</a></li> -->
+						</ul>
+					</div>
+					<div class="top-btn">
+						<button type="button">
+							<a href="" target="_blank">
+								Kamau's Summer 2022
+							</a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</section>
+	<!-- Home Page -->
+	<section dir="column" class="home">
+		<div class="home-container">
+			<div class="landing">
+				<div class="css-03">
+					<div style="opacity: 1;">
+						<div class="css-04">
+							<div style="transform: none;">
+								<h2 class="css-05 hover-down">
+									<p class="css-06">Summer 2022</p> 
+									<br>Crypto<br>Arbitrage
+								</h2>
+							</div>
+							<div class="css-07">
+								<p class="css-08">
+									Take a look at a few of the arbitrage applications I built Summer of 2022
+								</p>
+							</div>
+						</div>
+						<div class="css-09">
+							<div style="transform: none;">
+								<button type="button" class="hover css-10">
+									<a href="https://github.com/mau-mau0/crypto" target="_blank">
+										View Source Code
+									</a>
+								</button>
+							</div>
+							<div style="transform: none;">
+								<a class="css-13" href="">
+									<button type="button" class="hover css-14">
+										<a href="" target="_blank">
+										Jupyter
+									</a>
+									</button>
+								</a>
+							</div>
+						</div>
+						<div class="css-15">
+							<button type="button" class="css-16" value="0xA808B22ffd2c472aD1278088F16D4010E6a54D5F">
+								<p class="css-0">DEX</p>
+								<p class="css-17">&nbsp;Smart Contract</p>
+								&nbsp;<!-- -->0xA808...4D5F<!-- -->&nbsp;
+								<svg viewBox="0 0 24 24" focusable="false" class="css-18">
+									<path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div style="opacity: 1; transform: none;">
+						<div class="css-19">
+							<div class="css-20">
+								<div class="css-">
+									<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#6ee9b1" style="color:#6ee9b1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+									</svg>
+								</div>
+								<p class="css-23">Developer</p>
+								<p class="css-24">Kamau Bowie</p>
+							</div>
+							<div class="css-20">
+								<div class="css-fu6yzn">
+									<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#6ee9b1" style="color: #6ee9b1;" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
+									</svg>
+								</div>
+								<p class="css-23">PNL</p>
+								<p class="css-24">N/A</p>
+							</div>
+							<div class="css-20">
+								<div class="css-fu6yzn">
+									<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" font-size="22px" color="#6ee9b1" style="color: #6ee9b1;" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path>
+									</svg>
+								</div>
+								<p class="css-23">Status</p>
+								<p class="css-24">Offline</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<div style="transform: none;padding: 2rem 0rem 2rem 0rem;">
+		<div class="css-26">
+			<h2 class="css-31">Technologies Used</h2>
+			<div class="css-32">
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:40%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Docker" src="assets/images/docker.png">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:22%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="APIs" src="assets/images/logo_api.png">
+							</span>
+						</span>
+					</a>
+				</div>	
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:50%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Websockets" src="assets/images/websocket.png">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;" alt="Python" src="assets/images/python.png">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:40%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="MatPlotLib" src="assets/images/logo_matplotlib.png">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:45%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Pandas" src="assets/images/pandas.png">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:35%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="Numpy" src="assets/images/numpy-python.png">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div style="transform: none;">
+					<a class="css-33">
+						<span class="hover" style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%;transition:0.4s">
+							<span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:45%">
+								<img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="FastAPI" src="assets/images/fastapi.png">
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+				
+
+    <div style="transform: none;width: 100%;">
+      <div class="css-26">
+        <div class="css-27">
+          <h2 class="css-28">
+            <p class="css-06">Arbitrage</p>
+            &nbsp;is awesome
+          </h2>
+          <div class="css-29">
+            <p class="css-30">
+              Arbitrage is a term that is thrown around a lot in the financial world.
+              Many people think it's this magical thing that only Wall Street bankers can do. 
+			  While that may be partially true, arbitrage opportunities are all around us and 
+			  they're easy to take advantage of if you have the right tools. Especially in the 
+			  inefficient crypto markets.
+            </p>
+            <p class="css-30">
+              I built this application to make it easier for me to spot these opportunities.
+			  Instead of analyzing charts, and prices, and parsing through information myself, 
+			  I built this to do it for me. My goal is to spot these opportunities and execute 
+			  them using my developed strategies.
+			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+	<div class="roadmap" style="z-index: 5;">
+		<h3 class="roadmap-heading text-center">Road Map</h3>
+		<div class="roadmap-section mx-auto">
+			<div class="row">
+				<div class="col col-12 col-md-2 text-center">
+					<div class="roadmap-image-div">
+						<img alt="arrow" class="roadmap-image" src="assets/images/star.svg">
+					</div>
+				</div>
+				<div class="col col-12 col-md-5">
+					<h4 class="title">
+						May 
+						<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="CheckCircleIcon" style="color: rgb(22, 198, 9); margin-bottom: 6px; margin-left: 6px; font-size: 24px;">
+							<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+						</svg>
+					</h4>
+					<ul class="list">
+						<li class="point">Learn About & Setup Docker</li>
+						<li class="point">Learn & Install FastAPI to Docker</li>
+						<li class="point">Learn & Install Uvicorn to Docker</li>
+					</ul>
+				</div>
+				<div class="col col-12 col-md-5">
+					<ul class="list-right">
+						<li class="point">Install Jupyter to Docker</li>
+						<li class="point">Install Python Libraries to Docker</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="roadmap-section mx-auto">
+			<div class="row">
+				<div class="col col-12 col-md-2 text-center">
+					<div class="roadmap-image-div">
+						<img alt="tool" class="roadmap-image" src="assets/images/code.svg">
+					</div>
+				</div>
+				<div class="col col-12 col-md-5">
+					<h4 class="title">
+						June 
+						<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="CheckCircleIcon" style="color: rgb(22, 198, 9); margin-bottom: 6px; margin-left: 6px; font-size: 24px;">
+							<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+						</svg>
+					</h4>
+					<ul class="list">
+						<li class="point">Use APIs to fetch Exchange Data</li>
+						<li class="point">Use Websockets to create a price listener</li>
+					</ul>
+				</div>
+				<div class="col col-12 col-md-5">
+					<ul class="list-right">
+						<li class="point">Create Spot-Future Price Function</li>
+						<li class="point">Learn about Bellman-Ford Algo & Kelly Criterion</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="roadmap-section mx-auto">
+			<div class="row">
+				<div class="col col-12 col-md-2 text-center">
+					<div class="roadmap-image-div">
+						<img alt="code" class="roadmap-image" src="assets/images/trending-up.svg">
+					</div>
+				</div>
+				<div class="col col-12 col-md-5">
+					<h4 class="title">
+						July 
+						<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="CheckCircleIcon" style="color: rgb(22, 198, 9); margin-bottom: 6px; margin-left: 6px; font-size: 24px;">
+							<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+						</svg>
+					</h4>
+					<ul class="list">
+						<li class="point">Create Bellman-Ford Function for Crypto</li>
+						<li class="point">Create Kelly Criterion Function for Portfolio</li>
+						<li class="point">Read about Pyscript</li>
+					</ul>
+				</div>
+				<div class="col col-12 col-md-5">
+					<ul class="list-right">
+						<li class="point">Feed Websocket Data to Bellman Algo</li>
+						<li class="point">Feed Websocket Data to Future-Spot Arb</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="roadmap-section mx-auto">
+			<div class="row">
+				<div class="col col-12 col-md-2 text-center">
+					<div class="roadmap-image-div">
+						<img alt="network" class="roadmap-image" src="assets/images/grid.svg">
+					</div>
+				</div>
+				<div class="col col-12 col-md-5">
+					<h4 class="title">
+						August 
+						<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="CheckCircleIcon" style="color: rgb(22, 198, 9); margin-bottom: 6px; margin-left: 6px; font-size: 24px;">
+							<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+						</svg>
+					</h4>
+					<ul class="list">
+						<li class="point">Automate Conditional Trades</li>
+						<li class="point">Create Visual Interactive Notebook</li>
+						<li class="point">Build & Deploy Webpage</li>
+					</ul>
+				</div>
+				<div class="col col-12 col-md-5">
+					<ul class="list-right">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+
+  <section id="future">
+	<div id="page" class="css-34">
+		<div direction="column" width="100%" class="css-35">
+			<div class="css-36">
+				<div class="css-37">
+					<div style="width:100%;margin:80px auto" class="css-38">
+						<div direction="column" width="100%" class="css-39">
+							<p style="font-size:20px;font-family:'Clash Display';margin:0;width:100%;text-align:center;color:#6ee9b1">
+								Strategies
+							</p>
+							<h3 style="text-align:center;margin:1rem 0px 0px;width:100%;font-family:'Clash Display';font-size:50px;font-weight:bold;">
+								Future-Spot Arbitrage
+							</h3>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								Future-spot arbitrage is a strategy that takes advantage of the discrepancy 
+								between an underlying asset's spot price and futures price. A trader can 
+								profit by simultaneously acquiring a long position in the secondary market 
+								and a short position in the futures market. By doing this, they can capture 
+								the difference in prices between the two markets and earn a risk-free profit.
+							</p>
+						</div>
+					</div>
+					<div class="css-40">
+						<div class="padding-around-graph bg-theme-bg rounded-3xl bg-gradient-to-tl from-black to-theme-bg via-theme-bg" color="#161b1d">
+							<div direction="column" height="100%" class="css-41">
+								<div direction="column" class="css-42">
+									<figure>
+										<img style="border-radius:12px;" src="assets/images/Graph01.jpg" alt="Spot and Future Price Correlation Graph">
+										<figcaption style="color:#8c9ea6;float:right;font-style:italic;font-size:13px">Fig.1</figcaption>
+									</figure>
+								</div>
+								<a style="padding:0" class="css-43">
+									<div class="css-44">
+										Price Correlation Between Spot and Future
+										<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="button__arrow-fw" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+											<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144m124-144H100"></path>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="padding-around-graph bg-theme-bg rounded-3xl bg-gradient-to-tl from-black to-theme-bg via-theme-bg" color="#161b1d">
+							<div direction="column" height="100%" class="css-41">
+								<div direction="column" class="css-42">
+									<figure>
+										<img style="border-radius:12px;" src="assets/images/TargetGraph.jpg" alt="Target Spread Graph">
+										<figcaption style="color:#8c9ea6;float:right;font-style:italic;font-size:13px">Fig.2</figcaption>
+									</figure>
+								</div>
+								<a style="padding:0" class="css-43">
+									<div class="css-44">
+										Spread between Spot and Future Prices
+										<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="button__arrow-fw" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+											<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144m124-144H100"></path>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div style="width:100%;margin:80px auto" class="css-38">
+						<div direction="column" width="100%" class="css-39">
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								I developed a service that tracks the spot and future price of a specific 
+								cryptocurrency and sends an alert when the spread reaches a predetermined level. 
+								Theoretically, this would execute a trade that longs the undervalued asset and 
+								shorts the overvalued asset.
+							</p>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								If you have a look at figure 1, I created a graph showing the price correlation 
+								between the index and perpetual future price of Ethereum. As you can see, 
+								prices remain relatively tight but periodically, the spread widens. 
+							</p>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								Now lets look at at figure 2. I created second graph to capture those brief 
+								moments where the spread widens . The difference between assets tend to 
+								consolidate with each other, but due to market conditions the spread gap 
+								widens which triggers an alert as marked in figure 2.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+
+  <section id="triangle">
+	<div id="page" class="css-34">
+		<div direction="column" width="100%" class="css-35">
+			<div class="css-36">
+				<div style="max-width:1400px;" class="css-37">
+					<div style="width:100%;margin:80px auto" class="css-38">
+						<div direction="column" width="100%" class="css-39">
+							<h3 style="text-align:center;margin:1rem 0px 0px;width:100%;font-family:'Clash Display';font-size:50px;font-weight:bold;">
+								Triangle-Trade Arbitrage
+							</h3>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								Triangle trade arbitrage occurs when there are discrepancies in currency exchange rates. 
+								It can happen when a particular currency is overvalued compared to one currency but undervalued 
+								compared to the other. Or, to put it in other words, the exchange between currencies in the market is 
+								inefficient. A trader can take advantage of this by placing three simultaneous trades, buying one 
+								currency and selling another, using a third currency as the base currency.
+							</p>
+						</div>
+					</div>
+					<div class="css-40">
+						<div class="padding-around-graph bg-theme-bg rounded-3xl bg-gradient-to-tl from-black to-theme-bg via-theme-bg" color="#161b1d">
+							<div direction="column" height="100%" class="css-41">
+								<figure>
+									<img style="border-radius:12px;" src="assets/images/bellman0000.jpg" alt="Bellman Ford">
+									<figcaption style="color:#8c9ea6;float:right;font-style:italic;font-size:13px">Fig.3</figcaption>
+								</figure>
+								<a style="padding:0" class="css-43">
+									<div class="css-44">
+										Visual Representation of Bellman-Ford
+										<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="button__arrow-fw" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+											<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144m124-144H100"></path>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div style="width:100%;margin:80px auto" class="css-38">
+						<div direction="column" width="100%" class="css-39">
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 100%;">
+								I have developed a service that implements the bellman-ford algorithm, which is generally 
+								used to find the shortest path between nodes. The algorithm loops through a given graph 
+								until it finds the shortest path unless a negative weight cycle is detected. A negative 
+								weight cycle would result in an infinite loop equaling an arbitrage opportunity when you 
+								involve currencies. This allows me to find opportunities in the market by identifying potential 
+								paths between currencies and detecting any cycles that could create an arbitrage situation.
+							</p>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 100%;">
+								Taking a look at figure 3, I drew a visual that outlines an example of an opportunity between 
+								three cryptocurrencies. Although there are five currencies in the visual where are going to use 
+								3 for simplicity's sake. I built a script that feeds websocket data through the bellman-ford 
+								algorithm that spits out currency paths that create an arbitrage opportunity. Theoretically, 
+								it would take those trades and execute them making a small profit.	
+							</p>
+							<span class="text-theme-gray" style="text-decoration:underline;;margin: 2rem 0px 0px; text-align: left; width: 100%;">Explanation</span>
+							<p class="text-theme-gray" style="text-align: left; width: 100%;">
+								In figure 3 the exchange rates of<br>
+								Monero to Bitcoin is 0.741,<br>
+								Bitcoin to Ethereum is 1.366,<br>
+								Ethereum to Bitcoin is 0.995<br>
+								Multiplication of these exchange rates = 0.741 * 1.366 * 0.995 = 1.007<br>
+								Which greater than 1 making a 0.71% return.
+							</p>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+
+  <section id="kelly">
+	<div style="min-height:50vh;" id="page" class="css-34">
+		<div direction="column" width="100%" class="css-35">
+			<div class="css-36">
+				<div class="css-37">
+					<div style="width:100%;margin:80px auto" class="css-38">
+						<div direction="column" width="100%" class="css-39">
+							<h3 style="text-align:center;margin:1rem 0px 0px;width:100%;font-family:'Clash Display';font-size:50px;font-weight:bold;">
+								Kelly Criterion
+							</h3>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								Kelly criterion is a mathematical formula for sizing bets, to determine 
+								how much capital to commit to each investment or bet through a predefined 
+								fraction of assets. It is well-liked because, in comparison to other kinds 
+								of tactics, it frequently results in greater returns over time.
+							</p>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								I have implemented this function into my script and am using it to 
+								determine how much capital should be allocated to my various strategies 
+								in order to best manage risk. While the volatility in the crypto markets 
+								makes it harder to accurately predict, the Kelly Criterion still 
+								provides an interesting glimpse into how much capital should be allocated 
+								for maximum gain and minimum loss.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+
+  <section id="dex">
+	<div style="min-height:50vh;" id="page" class="css-34">
+		<div direction="column" width="100%" class="css-35">
+			<div class="css-36">
+				<div class="css-37">
+					<div style="width:100%;margin:80px auto" class="css-38">
+						<div direction="column" width="100%" class="css-39">
+							<h3 style="text-align:center;margin:1rem 0px 0px;width:100%;font-family:'Clash Display';font-size:50px;font-weight:bold;">
+								Decentralized Exchange Arbitrage
+							</h3>
+							<p class="text-theme-gray" style="margin: 1rem 0px 0px; text-align: center; width: 60%;">
+								Still in the Works.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+
+
+</body>
+</html>
+
