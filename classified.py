@@ -1,7 +1,0 @@
-SKEY = "628e798953766e000122c191"
-SSECRET = "b0bbc5cf-7aaa-4abe-8324-db1bb1d12865"
-SPASSPHRASE = "Cryptomau11"
-
-FKEY = "62bdc8d2aaa51b0001c59fe0"
-FSECRET = "3a1a28ec-2a4c-4d57-9ae8-96f025f2888b"
-FPASSPHRASE = "Cryptomau11"
